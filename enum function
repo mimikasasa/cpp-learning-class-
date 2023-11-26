@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	enum week{Monday=1,Tuesday=2,Wednesday=3,Thursday=4,Friday=5,Saturday=6,Sunday=7};//枚举变量和int类型占用内存一样
+
+	cout << Tuesday << endl;//2
+
+	enum ex{a,b,c=4,d,e,f,g};//枚举变量有相同类型
+	cout << "a= " << a << " b= " << b << " c=" << c << " d=" << d << " e=" << e << " f=" << f << " g=" << g << endl;//a= 0 b= 1 c=4 d=5 e=6 f=7 g=8
+
+	system("pause");
+	return 0;
+}
