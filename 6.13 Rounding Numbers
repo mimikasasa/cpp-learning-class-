@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+
+int roundTointeger(double x)
+{
+	int y;
+	y = floor(x + 0.5);
+	return y;
+}
+
+float roundToTenths(double x)
+{
+	float y;
+	y = floor(x*10 + 0.5)/10;
+	return y;
+}
+
+float roundToHundredths(double x)
+{
+	float y;
+	y = floor(x*100 + 0.5)/100;
+	return y;
+}
+
+float roundToThousandths(double x)
+{
+	float y;
+	y = floor(x*1000 + 0.5)/1000;
+	return y;
+}
+
+
+int main()
+{	
+	double a = 3.648;
+	cout << roundTointeger(a) << endl;
+	cout << roundToTenths(a) << endl;
+	cout << roundToHundredths(a) << endl;
+	cout << roundToThousandths(a) << endl;
+
+	system("pause");
+	return 0;
+}
