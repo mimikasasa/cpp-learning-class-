@@ -1,12 +1,16 @@
 #include<iostream>
-#include<ctime>//引用时间库
+#include<ctime>
 using namespace std;
 
 int main()
 {
-	srand(time(0));//投放随机数种子
+	srand(time(0));
 	int n;
-	n = rand() % 2 + 1;//得到   1<=n<=2
+	
+	//生成 a<=n<=b 的随机数  对（b-a+1)取模 再减去或加上xx得到想要的范围
+
+	//如-15<=n<=19
+	n = rand() % 35 - 15;
 	cout << n;
 
 
