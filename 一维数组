@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+
+//arrays and pointers
+/*
+* ayyay name is like constant pointer
+* pointers can do array subscripting operations
+*/
+
+int main()
+{
+	int b[4] = { 10,20,30,40 };
+	int* bp;
+	bp = b;
+
+	//最经典的遍历数组元素
+	for (int i = 0; i < 4; i++)
+		cout << "b[" << i << "]=" << b[i] << endl;
+
+	//数组名是一个地址，所以也可以解引用，其+1代表着指向下一块内存
+	for (int i = 0; i < 4; i++)
+		cout << "*(b+" << i << ")=" << *(b + i) << endl;
+
+	//指针和数组很像，因此 b[i]=bp[i]
+	for (int i = 0; i < 4; i++)
+		cout << "bp[" << i << "]=" << bp[i] << endl;
+
+	//和第二个同理 bp=b嘛 
+	for (int i = 0; i < 4; i++)
+		cout << "*(bp+" << i << ")=" << *(bp + i) << endl;
+
+//a[i] 就是 第 i 个元素的值，既然 a+i 是第 i 个元素的地址，那么我们知道地址引用其值的方法就是在前面加一个“ * ”符号， 所以*(a+i) = a[i] = 第 i 个元素的值
+
+	system("pause");
+	return 0;
+}
+
+//result
+/*
+b[0]=10
+b[1]=20
+b[2]=30
+b[3]=40
+*(b+0)=10
+*(b+1)=20
+*(b+2)=30
+*(b+3)=40
+bp[0]=10
+bp[1]=20
+bp[2]=30
+bp[3]=40
+*(bp+0)=10
+*(bp+1)=20
+*(bp+2)=30
+*(bp+3)=40
+*/
