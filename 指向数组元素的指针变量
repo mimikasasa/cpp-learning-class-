@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	//指向数组元素的指针变量
+	
+	//1.导入
+	int a = 10;
+	int* p;
+	p = &a;
+	cout << "*p= " << *p << endl;//*p=a=10
+
+	//2.拓展到一维
+	int b[4] = { 1,2,3,4 };
+	int* bp = b;
+	for (int i = 0; i < 4; i++)
+		cout << "*(bp+" << i << ")=" << *(bp + i) << "\t";
+	cout << endl;
+	
+	//3.拓展到二维
+	int c[3][4] = { {1,2,3,4},{5,6,7,8},{9,10,11,12} };
+	int* cp = c[0];//cp是列指针  c在二维代表行  所以需要把cp赋值给c[i]才是指向列
+
+	for (int i = 0; i < 4; i++)
+		cout << "*(cp+" << i << ")=" << *(cp + i) << "\t";
+	cout << endl;
+
+	for (int i = 0; i < 12; i++)
+		cout << "*(cp+" << i << ")=" << *(cp + i) << "\t";
+	//内存中地址是连续的 所以可以输出全部的元素
+
+	system("pause");
+	return 0;
+}
