@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cctype>
+using namespace std;
+
+// #include<cctype> islower()  isupper()  tolower()  toupper()
+
+void convertToUppercase(char*p)
+{
+	while (*p!='\0')
+	{
+		if (islower(*p))
+			*p = toupper(*p);
+		p++;
+	}
+}
+
+int main()
+{
+	char phrase[] = "characters and $32.98";
+	cout << "the phrase before conversion is: " << phrase << endl;
+
+	convertToUppercase(phrase);
+	cout << "the phrase after conversion is: " << phrase << endl;
+	
+	system("pause");
+	return 0;
+}
