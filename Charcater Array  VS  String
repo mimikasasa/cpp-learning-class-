@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	//1.char array
+	char color1[] = { 'b','l','u','e','\0'};
+	char colorarray[] = { 'b','l','u','e' };
+	char color2[] = { "blue" };
+	char color3[5] = { "blue" };
+	char color4[5] = "blue";//这几种color的定义都是等价的 
+
+	char ca[5] = "abcd";//注意数组长度为5  因为多开辟了第五块内存存放"\0"	
+	for (int i = 0; i < 5; i++)
+		cout << ca[i];//output "abcd"
+	cout << endl;
+	cout << ca << endl;//output "abcd"  //数组名确实是个地址  但是字符型数组输出地址编译器认为若至  故编译器会输出数组内元素即字符  如果是整形数组还真输出地址
+
+	char cb[5] = { 'a','b','c','d','e' };
+	for (int j = 0; j < 5; j++)
+		cout << cb[j];//output "abcde"
+	cout << endl;
+	cout << cb << endl;//output "abcde 烫烫烫..."  因为字符数组长度错了 应该为6  为5的话没有"\0" 故编译器会胡乱往回输出直到遇见"\0"
+
+	//2.string constant
+	string cc = "helloworld";
+	cout << "please enter a string" << endl;
+	//2.1 string的输入  读取字符直到遇见空格或EOF(end of file放在字符末尾代表资料结束
+	cin >> cc;
+	cout << cc << endl;//空格后面的都不会输出
+
+	//3.cin.getline的应用
+	//3.1  语法：cin.getline(array,size,delimiter)  输出size位之前的字符  即在size位置放置了"\0" 
+	char sentence[20];
+	cout << "please enter a sentence" << endl;
+	cin.getline(sentence, 20,'\n');
+	cout << sentence << endl;
+
+	//另一种是输入的元素中含有delimiter位  则会输出delimiter之前的字符
+	char sentence1[8];
+	cout << "please enter a sentence" << endl;
+	cin.getline(sentence1, 8, 'f');//cin>>abcdefg 
+	cout << sentence1 << endl;//cout:abcde
+
+	system("pause");
+	return 0;
+}
