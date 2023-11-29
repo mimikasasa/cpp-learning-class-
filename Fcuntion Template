@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+template <typename T>
+T max1(T a, T b)//"max"and "swap" 是c++标准库中已有的函数  命名时注意不要起重名
+{
+	return a > b ? a : b;
+}
+
+int main() {
+
+	int x = 1, y = 2;
+	cout << max1(x, y) << endl;
+
+	char a, b;
+	cout << max1('a', 'b') << endl;
+
+	double m = 1.5, n = 2.0;
+	cout << max1(m, n) << endl;
+
+	system("pause");
+	return 0;
+}
