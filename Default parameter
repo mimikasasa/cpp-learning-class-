@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int boxvolume(int length= 1, int width = 2, int height = 3)
+{
+	return length*width*height;
+}
+
+int main() {
+
+	cout << boxvolume() << endl;
+	cout << boxvolume(2) << endl;
+	cout << boxvolume(2, 3) << endl;
+
+	system("pause");
+	return 0;
+}
