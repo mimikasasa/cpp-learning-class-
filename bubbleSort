@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+void bubblesort(int x[],int size)
+{
+	int temp, work;
+	for (int i = 1; i < size; i++)
+	{	
+		work = 1;
+		for (int j = 0; j < size-i; j++)
+		{
+			if (x[j]>x[j+1])
+			{
+				temp = x[j];
+				x[j] = x[j + 1];
+				x[j + 1] = temp;
+				work = 0;
+			}
+		}
+		if (work) break;
+	}
+}
+
+int main() {
+
+	int arr[7] = { 5,3,7,2,8,9,4 };
+	for (int k = 0; k < 7; k++)
+	{
+		cout << "arr[" << k << "]=" << arr[k] << "\t";
+	}
+	cout << endl;
+
+	bubblesort(arr, 7);
+	for (int k = 0; k < 7; k++)
+	{
+		cout << "arr[" << k << "]=" << arr[k] << "\t";
+	}
+	cout << endl;
+
+	system("pause");
+	return 0;
+}
