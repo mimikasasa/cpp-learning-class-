@@ -17,7 +17,7 @@ struct student
 	int score;
 }s3;//顺便创建一个结构体变量
 
-int main1() {
+int main() {
 
 //2.通过学生类型创建具体学生（三种方法如下）
 	//struct关键字可以省略  结构体定义的时候（第8行）关键字不可以省略）
