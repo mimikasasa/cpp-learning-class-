@@ -20,7 +20,7 @@ struct teacher
 };
 
 
-int main4() {
+int main() {
 
 	//结构体嵌套结构体
 	//创建老师
