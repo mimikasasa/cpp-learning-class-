@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+//定义学生结构体
+struct student 
+{
+	string name;
+	int age;
+	int score;
+};
+
+//定义老师结构体
+struct teacher
+{
+	int id;
+	string name;
+	int age;
+	struct student stu;//老师辅导的学生
+};
+
+
+int main4() {
+
+	//结构体嵌套结构体
+	//创建老师
+	teacher t;
+	t.id = 10086;
+	t.name = "leigong";
+	t.age = 60;
+	t.stu.name = "wem";
+	t.stu.score = 120;
+	t.stu.age = 18;
+
+	cout << "name of teacher:" << t.name << "  id of teacher:" << t.id << "  age of teacher:" << t.age
+		 << "  name of student:" << t.stu.name << "  age of student:" << t.stu.age << "  score of student:" << t.stu.score << endl;
+
+
+	system("pause");
+	return 0;
+}
