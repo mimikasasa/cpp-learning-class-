@@ -40,7 +40,7 @@ int main() {
 	//cout << "main函数中打印 name:" << s.name << "  age:" << s.age << "  score:" << s.score << endl;
 
 	printstudent2(&s);
-	
+
 
 	system("pause");
 	return 0;
