@@ -12,7 +12,7 @@ struct student
 	int score;
 };
 
-int main3() {
+int main() {
 
 	//1.创建学生结构体变量
 	struct student s = { "wem",18,100 };
