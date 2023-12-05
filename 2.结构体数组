@@ -11,7 +11,7 @@ struct student
 	int score;
 };
 	
-int main2() {
+int main() {
 	
 	//2.创建结构体数组
 	struct student stuarray[3] =
