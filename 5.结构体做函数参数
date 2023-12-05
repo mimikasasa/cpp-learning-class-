@@ -25,7 +25,7 @@ void printstudent2(struct student* p)
 	cout << "子函数2中 name:" << p->name << "  age:" << p->age << "  score:" << p->score << endl;
 }
 
-int main5() {
+int main() {
 
 	//结构体做函数参数
 	//将学生传入到一个参数中  打印学生身上所有信息
