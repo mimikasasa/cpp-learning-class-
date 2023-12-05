@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+//结构体指针
+
+//定义学生结构体
+struct student
+{
+	string name;
+	int age;
+	int score;
+};
+
+int main3() {
+
+	//1.创建学生结构体变量
+	struct student s = { "wem",18,100 };
+
+	//2.通过指针指向结构体变量
+	struct student* p = &s;
+
+	//3.通过指针访问结构体变量中的数据1
+	//通过结构体指针  访问结构体中的属性  需要利用箭头（ -> ）
+	cout << "name:" << p->name << "  age:" << p->age << "  score:" << p->score << endl;
+
+	system("pause");
+	return 0;
+}
