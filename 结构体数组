@@ -1,0 +1,37 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+//结构体数组
+//1.定义结构体
+struct student
+{
+	string name;
+	int age;
+	int score;
+};
+	
+int main2() {
+	
+	//2.创建结构体数组
+	struct student stuarray[3] =
+	{
+		{"wem",18,100},{"payuin",28,60},{"ehan",38,75}
+	};
+
+	//3.给结构体数组中的元素赋值
+	stuarray[2].name = "jayu";
+	stuarray[2].age = 80;
+	stuarray[2].score = 50;
+
+	//4.遍历结构体数组
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "name:" << stuarray[i].name << "  age:" << stuarray[i].age << "  score:" << stuarray[i].score << endl;
+	}
+
+
+
+	system("pause");
+	return 0;
+}
