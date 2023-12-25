@@ -11,9 +11,11 @@ void selectionsort(int x[], int size)
 		{	
 			if (x[minIndex] > x[j]) minIndex = j;
 		}
-		temp = x[i];
+		if(minIndex!=i)
+		{temp = x[i];
 		x[i] = x[minIndex];
 		x[minIndex] = temp;
+		}
 	}
 }
 
